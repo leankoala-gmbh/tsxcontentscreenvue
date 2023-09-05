@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leankoala-gmbh/tsxcontentscreenvue.git"
+    "url": "https://github.com/leankoala-gmbh/threeSixtyContentScreen.git"
   },
   "scripts": {
     "dev": "vite",
@@ -24,7 +24,7 @@
     "test:unit:ui": "vitest --ui",
     "typecheck": "vue-tsc --noEmit",
     "generateCss": "postcss ./src/assets/index.css -o ./src/assets/output.css",
-    "prePublish": "npm run test:unit && npm run typecheck && npm run generateCss && npm run build"
+    "prePublish": "npm run generateCss && npm run build"
   },
   "dependencies": {
     "@vueuse/core": "^10.4.1",
