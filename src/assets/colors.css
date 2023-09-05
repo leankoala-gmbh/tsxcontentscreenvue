@@ -1,0 +1,20 @@
+:root {
+  --tsxScreenPrimary: #52bce5;
+  --tsxScreenPrimaryHover: #68caef;
+  --tsxScreenMarketing: #E77B35;
+  --tsxScreenMarketingHover: #e16b1f;
+  --tsxScreenBackground: #ffffff;
+  --tsxScreenText: #374253;
+  --tsxScreenHeadline: #111729;
+  /* Changelog Colors */
+  --tsxScreen-Changelog-added-bg: #E2FBE8;
+  --tsxScreen-Changelog-added-text: #3C7E44;
+  --tsxScreen-Changelog-fixed-bg: #b3d2f5;
+  --tsxScreen-Changelog-fixed-text: #108bfd;
+  --tsxScreen-Changelog-improved-bg: #F7E9FD;
+  --tsxScreen-Changelog-improved-text: #B135CC;
+  --tsxScreen-Changelog-deprecated-bg: #fde4a9;
+  --tsxScreen-Changelog-deprecated-text: #f7c53f;
+  --tsxScreen-Changelog-removed-bg: #fac5ca;
+  --tsxScreen-Changelog-removed-text: #e9606c;
+}

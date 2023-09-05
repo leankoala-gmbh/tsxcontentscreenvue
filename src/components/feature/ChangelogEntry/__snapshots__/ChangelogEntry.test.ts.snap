@@ -1,0 +1,71 @@
+// Vitest Snapshot v1
+
+exports[`ChangelogEntry.vue > should match snapshot 1`] = `
+"<div>
+  <div class=\\"flex items-center gap-3 mb-3\\">
+    <div class=\\"rounded px-2 py-1 changelogColors--improved\\">Improved</div>
+    <div class=\\"text-slate-500\\">1/10/2023</div>
+  </div>
+  <h2 class=\\"text-xl font-medium mb-4\\">The best one</h2>
+  <div class=\\"richTextContent richTextContent--changelog\\">
+    <h3 id=\\"sascha-is-awesome\\">Sascha is awesome!</h3>
+    <blockquote>
+      <p>By Sascha himself
+        👍 This is Success</p>
+    </blockquote>
+    <blockquote>
+      <p>📘 Info</p>
+    </blockquote>
+    <blockquote>
+      <p>🚧 Warning</p>
+    </blockquote>
+    <blockquote>
+      <p>❗️ Errors are the best</p>
+      <p>They deserve a description</p>
+    </blockquote>
+    <ul>
+      <li>
+        <p>Bullet</p>
+      </li>
+      <li>
+        <p>Another one</p>
+      </li>
+      <li>
+        <p>And another one</p>
+      </li>
+      <li>
+        <p><input checked=\\"\\" disabled=\\"\\" type=\\"checkbox\\">
+          We are good</p>
+      </li>
+      <li>
+        <p><input checked=\\"\\" disabled=\\"\\" type=\\"checkbox\\">
+          As usual</p>
+      </li>
+    </ul>
+    <hr>
+    <p>Faster then an eagle</p>
+    <p><img src=\\"https://files.readme.io/53726f5-eagle.jpeg\\" alt=\\"\\"></p>
+    <h1 id=\\"big-improvements\\">Big improvements!</h1>
+    <pre><code>/*
+ * Dear Maintainer
+ *
+ * Once you are done trying to ‘optimize’ this routine,
+ * and you have realized what a terrible mistake that was,
+ * please increment the following counter as a warning
+ * to the next guy.
+ *
+ * total_hours_wasted_here = 73
+ */
+</code></pre>
+    <p>Watch the video</p>
+    <p>[block:embed]
+      {
+      \\"url\\": \\"\\",
+      \\"provider\\": \\"\\",
+      \\"href\\": \\"\\",
+      \\"typeOfEmbed\\": \\"youtube\\"
+      }
+      [/block]</p>
+  </div>
+</div>"
+`;

@@ -1,0 +1,75 @@
+{
+  "name": "@webpros/tsxcontentscreenvue",
+  "version": "1.1.26",
+  "main": "dist/threeSixtyContentScreen.js",
+  "description": "Vue component for displaying api content",
+  "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
+  "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leankoala-gmbh/tsxcontentscreenvue.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite build && vite preview",
+    "start": "yarn dev & wait-on tcp:3000 -v",
+    "test:unit": "vitest run",
+    "test:unit:ui": "vitest --ui",
+    "typecheck": "vue-tsc --noEmit",
+    "generateCss": "postcss ./src/assets/index.css -o ./src/assets/output.css",
+    "prePublish": "npm run test:unit && npm run typecheck && npm run generateCss && npm run build"
+  },
+  "dependencies": {
+    "@vueuse/core": "^10.4.1",
+    "@webpros/koality-guide-client": "^1.1.8",
+    "axios": "^1.5.0",
+    "marked": "^4.2.12",
+    "mitt": "^3.0.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.20.7",
+    "@types/marked": "^4.0.8",
+    "@types/web-bluetooth": "^0.0.16",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "@vitejs/plugin-vue": "^2.3.4",
+    "@vitest/ui": "^0.27.0",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "@vue/test-utils": "^2.2.7",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.8.0",
+    "jsdom": "^20.0.3",
+    "msw": "^0.49.2",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.0",
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.4",
+    "unplugin-auto-import": "^0.12.1",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^2.9.15",
+    "vitest": "^0.26.3",
+    "vue-tsc": "^1.0.22",
+    "wait-on": "~6.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}
