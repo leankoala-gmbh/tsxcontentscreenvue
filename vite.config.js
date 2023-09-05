@@ -35,8 +35,7 @@ export default defineConfig({
         './src/utils/**'
       ],
       imports: [
-        'vue',
-        '@vueuse/core'
+        'vue'
       ],
       eslintrc: {
         enabled: true,
