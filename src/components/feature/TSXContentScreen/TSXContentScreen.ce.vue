@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+import { onClickOutside } from '@vueuse/core'
 import { IContentConfig, TScreenTypes } from '@/types/general'
-import {debugEcho}  from '~/composables/debugTools'
+import { debugEcho }  from '~/composables/debugTools'
 import mitt from 'mitt'
 
 const props = defineProps({
@@ -59,9 +60,6 @@ const closeEvent = () => {
     screen: screenType
   })
 }
-
-
-
 
 const closeScreen = () => {
   isOpenGuide.value = false
@@ -158,6 +156,11 @@ onClickOutside(guide, event => closeScreen())
           :is-partner="isPartner"
           :title="title"
           :brand-type="brandType"
+          @close-screen="closeScreen"
+        />
+        <ScreenCustom
+          v-if="type === 'custom'"
+          :title="title"
           @close-screen="closeScreen"
         />
       </div>

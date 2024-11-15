@@ -1,12 +1,12 @@
 {
   "name": "@webpros/tsxcontentscreenvue",
-  "version": "1.1.26",
+  "version": "1.3.0",
   "main": "dist/threeSixtyContentScreen.js",
   "description": "Vue component for displaying api content",
   "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",
   "license": "MIT",
   "engines": {
-    "node": "16.x"
+    "node": ">=16.0.0 <23.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
