@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     ScreenAdvisor: typeof import('./src/components/feature/ScreenAdvisor/ScreenAdvisor.vue')['default']
     ScreenChangelog: typeof import('./src/components/feature/ScreenChangelog/ScreenChangelog.vue')['default']
     ScreenContent: typeof import('./src/components/feature/ScreenContent/ScreenContent.vue')['default']
+    ScreenCustom: typeof import('./src/components/feature/ScreenCustom/ScreenCustom.vue')['default']
     ScreenMarketing: typeof import('./src/components/feature/ScreenMarketing/ScreenMarketing.vue')['default']
     'TSXContentScreen.ce': typeof import('./src/components/feature/TSXContentScreen/TSXContentScreen.ce.vue')['default']
     TSXContentScreenContent: typeof import('./src/components/feature/TSXContentScreen/TSXContentScreenContent.vue')['default']

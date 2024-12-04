@@ -1,6 +1,6 @@
 {
   "name": "@webpros/tsxcontentscreenvue",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "main": "dist/threeSixtyContentScreen.js",
   "description": "Vue component for displaying api content",
   "author": "Sascha Fuchs (sascha.fuchs@webpros.com)",

@@ -21,6 +21,7 @@ const props = withDefaults(defineProps<Props>(), {
   contentId: '',
   type: 'content',
   partnerShopUrl: '',
+  partnerShopIframe: true,
   debug: false,
   iframeButtonLabel: null,
   iframeUrl: null,
@@ -73,6 +74,13 @@ const triggerIframe = () => {
     action: 'openIframe'
   })
 }
+
+const triggerPartnerShopPage = () => {
+  window.open(fetchedURL.value, '_blank')
+  window.mitt.emit('tsxContentScreenEvents', {
+    action: 'openCpanelStore'
+  })
+}
 </script>
 
 <template>
@@ -123,6 +131,14 @@ const triggerIframe = () => {
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerIframe"
+    >
+      {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
+    </a>
+  </div>
+  <div v-if="partnerShopIframe" class="p-4">
+    <a
+      class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
+      @click="triggerPartnerShopPage"
     >
       {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
     </a>

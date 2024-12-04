@@ -26,6 +26,10 @@ const props = defineProps({
     type: String,
     default: ''
   },
+  partnerShopIframe: {
+    type: Boolean,
+    default: true
+  },
   isPartner : {
     type: Boolean,
     default: false
@@ -59,6 +63,7 @@ const props = defineProps({
       type="marketing"
       :is-partner="isPartner"
       :partner-shop-url="partnerShopUrl"
+      :partner-shop-iframe="partnerShopIframe"
       :iframe-button-label="iframeButtonLabel"
       :iframe-url="iframeUrl"
       :brand-name="brandName"

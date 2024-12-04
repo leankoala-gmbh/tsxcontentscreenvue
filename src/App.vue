@@ -69,10 +69,11 @@ const changelogEndpoints = JSON.stringify({
     </div>
     <div>
       <TSXContentScreenTrigger
-        content-id="customer.360.enterprise.fsc"
+        content-id="customer.360.pro.api-keys"
         type="marketing"
         language="de"
-        is-partner="true"
+        is-partner="false"
+        partner-shop-url="https://www.google.com"
       >
         Open Iframe Content Marketing TRUE
       </TSXContentScreenTrigger>
@@ -97,7 +98,19 @@ const changelogEndpoints = JSON.stringify({
         Open Changelog
       </TSXContentScreenTrigger>
     </div>
-    <TSXContentScreen :debug="true" />
+    <div>
+      <TSXContentScreenTrigger
+        type="custom"
+        title="Custom blaaaah"
+      >
+        Custom sdsd
+      </TSXContentScreenTrigger>
+    </div>
+    <TSXContentScreen :debug="true">
+      <div class="h-10 bg-red-500">
+        Custom sdsd
+      </div>
+    </TSXContentScreen>
   </div>
 </template>
 
