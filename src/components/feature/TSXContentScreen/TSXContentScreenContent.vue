@@ -10,6 +10,7 @@ interface Props {
   contentId: string
   type?: TScreenTypes
   partnerShopUrl?: string
+  partnerShopIframe?: boolean
   debug: boolean
   iframeButtonLabel?: string | null
   iframeUrl?: string | null
@@ -84,7 +85,12 @@ const triggerPartnerShopPage = () => {
 </script>
 
 <template>
-  <div class="overflow-y-auto px-6 pb-6 flex-auto">
+  <div
+    class="px-6 pb-6 flex-auto"
+    :class="[
+      iframeIsOpen ? '' : 'overflow-y-auto'
+    ]"
+  >
     <div v-if="!iframeIsOpen" class="markdown-body ">
       <div
         v-if="!apiError"
