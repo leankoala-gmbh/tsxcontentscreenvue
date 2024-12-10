@@ -141,7 +141,7 @@ const triggerPartnerShopPage = () => {
       {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
     </a>
   </div>
-  <div v-if="partnerShopIframe" class="p-4">
+  <div v-if="!iframeUrl && partnerShopIframe" class="p-4">
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerPartnerShopPage"
