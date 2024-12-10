@@ -54,7 +54,7 @@ export default defineConfig({
     entry: path.resolve(__dirname, 'src/index.ts'),
     cssCodeSplit: false,
     rollupOptions: {
-      external: Object.keys(pkg.dependencies || {}),
+      // external: Object.keys(pkg.dependencies || {}),
       output: {
         entryFileNames: 'threeSixtyContentScreen.js',
         chunkFileNames: 'threeSixtyContentScreen-[name].js',
