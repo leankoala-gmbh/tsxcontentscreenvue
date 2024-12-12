@@ -59,6 +59,10 @@ const props = defineProps({
   brandName: {
     type: String,
     default: '360 Monitoring'
+  },
+  partnerShopIframe: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -78,7 +82,8 @@ const trigger = () => {
     changelogEndpoints: props.changelogEndpoints,
     brandType: props.brandType,
     isPartner: props.isPartner.toLowerCase() === 'true',
-    brandName: props.brandName
+    brandName: props.brandName,
+    partnerShopIframe: props.partnerShopIframe
   })
 }
 

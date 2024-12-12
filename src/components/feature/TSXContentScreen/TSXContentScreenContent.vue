@@ -2,9 +2,9 @@
 import { TScreenTypes } from '@/types/general'
 import GuideClient from '@webpros/koality-guide-client'
 import { marked } from 'marked'
+import { o } from 'msw/lib/SetupApi-b2f0e5ac'
 
 const { getLanguage, translate } = useTranslator()
-
 
 interface Props {
   contentId: string
@@ -51,7 +51,6 @@ const fetchContent = async () => {
       buttons: buttons || [],
       cta: ctaNew ?? null
     }
-    console.log('meta', meta.value)
   } catch (err) {
     console.error(err)
     apiError.value = err
@@ -81,6 +80,10 @@ const triggerPartnerShopPage = () => {
   window.mitt.emit('tsxContentScreenEvents', {
     action: 'openCpanelStore'
   })
+}
+
+const uniBool = (value: string | boolean) : boolean => {
+  return typeof value === 'boolean' ? value : value === 'true'
 }
 </script>
 
@@ -133,7 +136,7 @@ const triggerPartnerShopPage = () => {
       {{ meta.cta.subline }}
     </div>
   </div>
-  <div v-if="iframeUrl && !iframeIsOpen && !partnerShopIframe" class="p-4">
+  <div v-if="!!iframeUrl?.length && !iframeIsOpen && !uniBool(partnerShopIframe)" class="p-4">
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerIframe"
@@ -141,7 +144,7 @@ const triggerPartnerShopPage = () => {
       {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
     </a>
   </div>
-  <div v-if="!iframeUrl && partnerShopIframe" class="p-4">
+  <div v-if="!!iframeUrl?.length && uniBool(partnerShopIframe)" class="p-4">
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerPartnerShopPage"

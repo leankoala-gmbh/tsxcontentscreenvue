@@ -71,6 +71,19 @@ const changelogEndpoints = JSON.stringify({
       <TSXContentScreenTrigger
         content-id="customer.360.pro.api-keys"
         type="marketing"
+        label="viktor"
+        language="de"
+        iframe-button-label="Open in iframe"
+        iframe-url="https://www.google.com"
+        partner-shop-iframe="false"
+      >
+        Blah
+      </TSXContentScreenTrigger>
+    </div>
+    <div>
+      <TSXContentScreenTrigger
+        content-id="customer.360.pro.api-keys"
+        type="marketing"
         language="de"
         is-partner="false"
         partner-shop-url="https://www.google.com"
