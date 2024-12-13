@@ -83,7 +83,9 @@ const triggerPartnerShopPage = () => {
 }
 
 const uniBool = (value: string | boolean) : boolean => {
-  return typeof value === 'boolean' ? value : value === 'true'
+  return typeof value === 'boolean'
+  ? value
+  : value.length > 0 && value === 'true'
 }
 </script>
 
