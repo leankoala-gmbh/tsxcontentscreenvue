@@ -119,6 +119,34 @@ const changelogEndpoints = JSON.stringify({
         Custom sdsd
       </TSXContentScreenTrigger>
     </div>
+    <div>
+      <TSXContentScreenTrigger
+        type="marketing"
+        brandName="360 Monitoring Stage"
+        contentId="customer.360.business.blocklists"
+        iframeUrl="https://store.plesk.com/1404/?scope=checkout&cart=s8843&recommendation=360monitoring-pro,360monitoring-biz,360monitoring-ent&cfg=base_iframe_or&x-loading=block&currencies=EUR,USD,GBP,JPY&x-activation-data=NjZjNWY3YjI5NWFhZDYyNTE1MDQwOGU0&quantityrno_2=0&quantityrno_3=1&deliveryEmail=jorge.flores%2Bwhmdemo24%40webpros.com"
+        isPartner="true"
+        label="Business"
+        language="en"
+        partnerShopIframe="true"
+        partnerShopUrl=""
+        title="You have discovered a new feature"
+      >
+        Custom platform
+      </TSXContentScreenTrigger>
+    </div>
+    <div>
+      <TSXContentScreenTrigger
+        contentId="customer.360.business.blocklists"
+        label="Business"
+        language="en"
+        partnerShopUrl="/purchase"
+        title="You have discovered a new feature"
+        type="marketing"
+      >
+        cPanel Test
+      </TSXContentScreenTrigger>
+    </div>
     <TSXContentScreen :debug="true">
       <div class="h-10 bg-red-500">
         Custom sdsd

@@ -2,7 +2,6 @@
 import { TScreenTypes } from '@/types/general'
 import GuideClient from '@webpros/koality-guide-client'
 import { marked } from 'marked'
-import { o } from 'msw/lib/SetupApi-b2f0e5ac'
 
 const { getLanguage, translate } = useTranslator()
 
@@ -87,6 +86,10 @@ const uniBool = (value: string | boolean = '') : boolean => {
   ? value
   : value.length > 0 && value === 'true'
 }
+
+const ctaLabel = computed(() => {
+  return props.iframeButtonLabel || meta.value?.cta?.label || 'Open here'
+})
 </script>
 
 <template>
@@ -138,20 +141,20 @@ const uniBool = (value: string | boolean = '') : boolean => {
       {{ meta.cta.subline }}
     </div>
   </div>
-  <div v-if="!!iframeUrl?.length && !iframeIsOpen && !uniBool(partnerShopIframe)" class="p-4">
+  <div v-if="!!iframeUrl?.length && !iframeIsOpen && uniBool(partnerShopIframe)" class="p-4">
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerIframe"
     >
-      {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
+      {{ ctaLabel }}
     </a>
   </div>
-  <div v-if="!!iframeUrl?.length && uniBool(partnerShopIframe)" class="p-4">
+  <div v-if="!!iframeUrl?.length && !uniBool(partnerShopIframe) && partnerShopUrl" class="p-4">
     <a
       class="inline-flex items-center justify-center transition-all duration-300 cursor-pointer border-0 focus:outline-none p-3 w-full rounded mb-3 text-white bg-marketing hover:bg-marketing-hover"
       @click="triggerPartnerShopPage"
     >
-      {{ iframeButtonLabel || meta.cta.label || 'Open here' }}
+      {{ ctaLabel }}
     </a>
   </div>
 </template>
