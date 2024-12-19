@@ -122,29 +122,41 @@ const changelogEndpoints = JSON.stringify({
     <div>
       <TSXContentScreenTrigger
         type="marketing"
-        brandName="360 Monitoring Stage"
-        contentId="customer.360.business.blocklists"
-        iframeUrl="https://store.plesk.com/1404/?scope=checkout&cart=s8843&recommendation=360monitoring-pro,360monitoring-biz,360monitoring-ent&cfg=base_iframe_or&x-loading=block&currencies=EUR,USD,GBP,JPY&x-activation-data=NjZjNWY3YjI5NWFhZDYyNTE1MDQwOGU0&quantityrno_2=0&quantityrno_3=1&deliveryEmail=jorge.flores%2Bwhmdemo24%40webpros.com"
-        isPartner="true"
+        brand-name="360 Monitoring Stage"
+        content-id="customer.360.business.blocklists"
+        iframe-url="https://store.plesk.com/1404/?scope=checkout&cart=s8843&recommendation=360monitoring-pro,360monitoring-biz,360monitoring-ent&cfg=base_iframe_or&x-loading=block&currencies=EUR,USD,GBP,JPY&x-activation-data=NjZjNWY3YjI5NWFhZDYyNTE1MDQwOGU0&quantityrno_2=0&quantityrno_3=1&deliveryEmail=jorge.flores%2Bwhmdemo24%40webpros.com"
+        is-partner="true"
         label="Business"
         language="en"
-        partnerShopIframe="true"
-        partnerShopUrl=""
+        partner-shop-iframe="true"
+        partner-shop-url=""
         title="You have discovered a new feature"
       >
-        Custom platform
+        Platform Test
       </TSXContentScreenTrigger>
     </div>
     <div>
       <TSXContentScreenTrigger
-        contentId="customer.360.business.blocklists"
+        content-id="customer.360.business.blocklists"
         label="Business"
         language="en"
-        partnerShopUrl="/purchase"
+        partner-shop-url="/purchase"
         title="You have discovered a new feature"
         type="marketing"
       >
         cPanel Test
+      </TSXContentScreenTrigger>
+    </div>
+    <div>
+      <TSXContentScreenTrigger
+        content-id="customer.360.pro.api-keys"
+        label="icon"
+        language="en"
+        partner-shop-url="/purchase"
+        title="You have discovered a icon feature"
+        type="marketing"
+      >
+        WHMCS MC Test
       </TSXContentScreenTrigger>
     </div>
     <TSXContentScreen :debug="true">
