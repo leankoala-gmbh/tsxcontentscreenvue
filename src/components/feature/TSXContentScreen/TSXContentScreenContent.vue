@@ -158,4 +158,3 @@ const ctaLabel = computed(() => {
     </a>
   </div>
 </template>
-

@@ -9,14 +9,32 @@ const changelogEndpoints = JSON.stringify({
   postChangelog: 'https://stage.monitoring360.io/changelog/read/'
 })
 
-// window.mitt.on('tsxContentScreenEvents', (event) => {
-//   console.log('tsxContentScreenEvents', event)
-// })
+window.mitt.on('tsxContentScreenEvents', (event) => {
+  console.log('tsxContentScreenEvents', event)
+})
+
+
+const customEvent = () => {
+  window.mitt.emit('tsxContentScreenConfig', {
+    contentId: 'customer.360.business.scheduled-crawls',
+    type: 'marketing',
+    language: 'en',
+    label: 'Business',
+    title: 'You have discovered a new feature',
+    partnerShopUrl: 'https://www.google.com',
+    partnerShopIframe: true,
+    isPartner: false,
+    brandName: '360 Monitoring Stage'
+})
+}
 </script>
 
 
 <template>
   <div>
+    <div @click="customEvent">
+      click me
+    </div>
     <div class="mb-10">
       <TSXContentScreenTrigger
         content-id="html.deadlink.404"
